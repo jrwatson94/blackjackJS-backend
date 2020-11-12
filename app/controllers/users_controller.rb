@@ -5,6 +5,12 @@ class UsersController < ApplicationController
         render json: @users
     end
 
+    def user_hands
+        @user = User.find(params[:id])
+        @user_hands = @user.hands
+        render json: @user_hands
+    end
+
     def show 
         @user = User.find(params[:id])
         render json: @user
