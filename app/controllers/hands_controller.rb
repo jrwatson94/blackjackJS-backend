@@ -18,6 +18,8 @@ class HandsController < ApplicationController
         render json: @hand
     end
 
+    
+
     private
 
     def hand_params

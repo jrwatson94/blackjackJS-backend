@@ -36,7 +36,12 @@ class UsersController < ApplicationController
         render json: @user
     end
 
-    def destroy
+    def destroy_user_hands
+        @user = User.find(params[:id])
+        @user_hands = @user.hands
+        @user_hands.destroy_all
+        render json: @user_hands
+
     end
 
    
